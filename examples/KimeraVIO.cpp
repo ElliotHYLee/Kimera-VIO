@@ -172,7 +172,7 @@ int main(int argc, char* argv[]) {
     case VIO::FrontendType::kStereoImu: {
       // Stereo VIO pipeline - processes stereo camera pair + IMU  
       // Enables depth estimation from stereo matching and more robust tracking
-      vio_pipeline = std::make_unique<VIO::StereoImuPipeline>(vio_params);
+      vio_pipeline = std::make_unique<VIO::StereoImuPipeline>(vio_params); // <-- EuroC example runs this.
     } break;
     default: {
       LOG(FATAL) << "Unrecognized Frontend type: "

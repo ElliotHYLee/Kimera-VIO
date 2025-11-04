@@ -32,6 +32,8 @@ SOFTWARE.
 #include "kimera-vio/frontend/feature-detector/anms/nanoflann.hpp"
 #include "kimera-vio/frontend/feature-detector/anms/range-tree/ranget.h"
 
+// adaptive non-maximal suppression methods namespace
+
 namespace anms {
 
 std::vector<cv::KeyPoint> TopN(const std::vector<cv::KeyPoint>& keyPoints,
