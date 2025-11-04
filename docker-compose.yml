@@ -1,0 +1,21 @@
+
+services:
+  kimera:
+    # build: 
+    #   context: .
+    #   dockerfile: Dockerfile_20_04
+    image: "ubicoders/kimera-vio:latest"
+    container_name: "kimera_vio"
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /mnt/01D66F5B1654EDA0/euroc:/root/euroc   # <── add this
+      - ./:/root/Kimera-VIO   # <── add this for this repo code
+    network_mode: host
+    stdin_open: true      # equivalent to -it
+    tty: true             # keeps terminal interactive
+
+
+
