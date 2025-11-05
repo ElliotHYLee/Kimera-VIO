@@ -187,11 +187,10 @@ if __name__ == "__main__":
         "cam_sigma": 0.0,
     }
 
-    landmarks = [
-        gtsam.Point3(0, 0, 10), # z front, x right, y down
+    landmarks = [ # x y z order
+        gtsam.Point3(0, 0, 10), # x right, y down, z front
         gtsam.Point3(5, -2, 8),
         gtsam.Point3(-3, 1, 12),        
-        
     ]
 
     # x,y,z, vx, vy, vz, yaw,pitch,roll
